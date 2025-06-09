@@ -1,0 +1,156 @@
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsmath,graphicx,subcaption}
+\usepackage[lastpage,user]{zref}
+\usepackage{fancyhdr}
+\usepackage{txfonts}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{etaremune}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,decorations.markings,positioning}
+\usepackage{mathrsfs}
+\usepackage{pifont}
+
+\newcommand{\uni}{\cup}
+\newcommand{\sus}{\subseteq}
+\newcommand{\sis}{\supseteq}
+\newcommand{\ex}{\exists}
+\newcommand{\ria}{\rightarrow}
+\newcommand{\Ria}{\Rightarrow}
+\newcommand{\lea}{\leftarrow}
+\newcommand{\Lea}{\Leftarrow}
+\newcommand{\s}{\quad}
+\newcommand{\Real}{\mathbf{R}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\all}{\forall}
+\newcommand{\nt}{\mathbb}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\va}{\varepsilon}
+\newcommand{\ka}{\kappa}
+\newcommand{\la}{\lambda}
+\newcommand{\ro}{\rho}
+\newcommand{\si}{\sigma}
+\newcommand{\nue}{\upsilon}
+\newcommand{\ph}{\phi}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\De}{\Delta}
+\newcommand{\Si}{\Sigma}
+\newcommand{\tri}{\triangle}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+\newcommand{\bpr}{\begin{proof}}
+\newcommand{\epr}{\end{proof}}
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}}
+\newcommand{\abs}{{\big |}}
+\newcommand{\Abs}{{\Big |}}
+\newcommand{\hli}{ \hrulefill }
+\newcommand{\lab}{\label}
+\newcommand{\pref}{\pageref}
+\newcommand{\eq}{equation }
+\newcommand{\fig}{figure }
+\newcommand{\bfig}{\begin{figure} }
+\newcommand{\efig}{\end{figure} }
+\newcommand{\sy}{system }
+\newcommand{\ic}{initial conditions }
+\newcommand{\evl}{eigenvalues }
+\newcommand{\evc}{eigenvectors }
+\newcommand{\fr}[2]{\frac{}{}}
+\newcommand{\btal}{\begin{table}}
+\newcommand{\etal}{\end{table}}
+\newcommand{\btab}{\begin{tabular}}
+\newcommand{\etab}{\end{tabular}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ele}{\text{e}}
+\newcommand{\del}{\bigtriangledown}
+\newcommand{\Ep}{\varepsilon}
+\newcommand{\kte}{\ka T_\ele}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\bra}[1]{\langle #1 \rangle}
+\newcommand{\mev}{\text{MeV}}
+\newcommand{\he}[1]{\text{He}^{#1}}
+\newcommand{\li}[1]{\text{Li}^{#1}}
+\newcommand{\ds}{\text{d}}
+\newcommand{\dder}[2]{\frac{\ds^2 #1}{\ds #2^2}}
+\newcommand{\der}[2]{\frac{\ds #1}{\ds #2}}
+\newcommand{\bigp}[1]{\left(#1\right)}
+\newcommand{\cross}[1]{\del\times\vec{#1}}
+\newcommand{\dig}[1]{\del\cdot\vec{#1}}
+\newcommand{\bigs}[1]{\left[#1\right]}
+\newcommand{\mynote}[1]{\textcolor{red}{#1}}
+\newcommand{\myqn}[1]{\textcolor{blue}{#1}}
+\newcommand{\er}{$\vec{E_r}$ }
+% \usepackage[usenames,dvipsnames]{color}
+\newcommand{\cmod}{C-Mod }
+\newcommand{\ddd}{DIII-D }
+\newcommand{\imode}{I-mode }
+\newcommand{\lmode}{L-mode }
+\newcommand{\hmode}{H-mode }
+
+\let\tempone\itemize
+\let\temptwo\enditemize
+% \renewenvironment{itemize}{\tempone\addtolength{\itemsep}{-0.5\baselineskip}}{\temptwo}
+\beamertemplatenavigationsymbolsempty
+
+\definecolor{INLblue}{rgb}{0.0246913, 0.32921810, 0.646090534} 
+\setbeamercolor{frametitle}{fg=INLblue}
+\setbeamercolor{section in head/foot}{fg=INLblue}
+\setbeamercolor{author in head/foot}{fg=INLblue}
+\setbeamercolor{date in head/foot}{fg=INLblue}
+\setbeamercolor{normal text}{fg=INLblue}
+
+\setbeamertemplate{itemize item}{\color{INLblue}{\tiny\ding{108}}}
+\setbeamertemplate{itemize subitem}{\color{INLblue}$-$}
+\setbeamertemplate{itemize subsubitem}{\color{INLblue}{\tiny\ding{108}}}
+\setbeamertemplate{itemize subsubsubitem}{\color{INLblue}$-$}
+
+\makeatletter
+\setbeamertemplate{frametitle}{
+    \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+    \@tempdima=\textwidth%
+    \advance\@tempdima by\beamer@leftmargin%
+    \advance\@tempdima by\beamer@rightmargin%
+    \vspace*{.4cm}
+    \hspace*{.75cm}
+    % \hspace*{-5cm}
+    \begin{beamercolorbox}[sep=0.3cm,wd=\the\@tempdima]{frametitle}
+        \usebeamerfont{frametitle}%
+        \vbox{}\vskip-1ex%
+        \if@tempswa\else\csname beamer@ftecenter\endcsname\fi%
+        \strut\insertframetitle\strut\par%
+        {%
+            \ifx\insertframesubtitle\@empty%
+            \else%
+            {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+            \fi
+        }%
+        \vskip-1ex%
+        \if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+    \end{beamercolorbox}%
+}
+\makeatother
+
+\usebackgroundtemplate%
+{%
+    \includegraphics[width=\paperwidth,height=\paperheight, page=2]{Images/Presentation1.pdf}%
+}
