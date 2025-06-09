@@ -1,0 +1,15 @@
+\begin{frame}{Model Inference}
+    % If $n$ points are passed to the model $n\times n$ comparisons are made, making the model \alert{computationally expensive}. Batching reduces statistics during model's first pass.%To reduce this demand, data is batched. This results in \alert{less data} to inform the model's statistics.
+    $\mathbf{n\times n \Ria}$ Computationally Expensive / Reduced $n$ statistics
+    \vfill  
+    
+    \textbf{Multifilter:} iterate on suspected points 
+    \begin{itemize}
+        \item A data frame of anomalous predictions is made from all batches predictions
+        \item Upon completion of the initial pass non-anomalous data points are randomly selected from entire data set. 
+        \item Anomalous data points from each batch are compared to each other, as well as, background points from the entire data set  
+        \item A count of times each point is predicted anomalous is kept as a batch score 
+    \end{itemize}
+    \vfill
+    Datapoints with batch score $<$ batch threshold are less likely to be false positives. 
+\end{frame}

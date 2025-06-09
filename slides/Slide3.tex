@@ -1,0 +1,30 @@
+\begin{frame}{Model Structure}
+    The HSI model is broken down into two main components, \alert{weights generation} and {loss function minimization}. 
+
+    \vfill
+    
+    \begin{columns}
+        \begin{column}{.7\textwidth}
+            \includegraphics[width=\textwidth]{../Images/model_pipeline_tikz/Phase1_tikz/tikz.pdf}    
+        \end{column}
+        \begin{column}{.3\textwidth}
+            \only<1>{
+                \bc 
+                    Density Calculations:\\
+                    \vspace{.1in} 
+                    $\gamma_i=\sum_{i\neq j}e^{-\left( d_{ij}/d_c\right)^2}$ 
+                    \vspace{.1in}
+                    \includegraphics[width=1.2\textwidth]{../Images/density_plot.png}
+                \ec
+                }
+            \only<2>{
+                \bc 
+                    Similarity Calculations:\\
+                    \vspace{.1in} 
+                    $s_{ij}=e^{\left(- d_{ij}/d_c^2 \right)}$   \vspace{.1in}
+                    \includegraphics[width=1.2\textwidth]{../Images/similarity_plot.png}
+                \ec}
+        \end{column}
+    \end{columns}
+\end{frame}
+

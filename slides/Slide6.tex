@@ -1,0 +1,16 @@
+\begin{frame}{Optimize POF$(\vec{m})$}
+    Assumption: Anomalous data has a fragile relationship with background data. This relationship will not minimize the POF as well as common points. \vfill
+
+    \textbf{HSI Pipeline:}
+    \begin{itemize}
+        \item A set of "evolved" matrices are kept $\vec{A}^k$
+        \item Anomaly scores, $\vec{m}$, are used to minimize POF 
+        \item Minimized anomaly scores are used as starting point for POF at $k+1$
+        \item Once anomaly score converge with in a tolerance, optimization ends
+        \item $\abs Z_{score}\abs$ is calculated for anomaly scores
+    \end{itemize}\vfill
+    Data points with $\abs Z_{score}\abs>$ Anomaly Threshold value are predicted. 
+\end{frame}
+
+
+    

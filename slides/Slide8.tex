@@ -1,0 +1,25 @@
+\begin{frame}{Model Parameter Summary}
+    \vfill
+Parameters that affect the HSI Model's predictions:
+\vfill
+    \begin{table}
+        \begin{tabular}{|l|| c| r|}\hline
+            \textbf{Parameter} & \textbf{Name} & \textbf{Effect}  \\\hline \hline % Is this correct?            
+            $c_d$ & Cut-off Distance  &Scales $\vec{\gamma}$ and $\mathbf{A}$\\\hline
+            $(P_r)^k$ & Penalty Ratio  &Decays loss contributions \\
+            &$0<P_r<1$&at greater topological scales \\\hline
+            $l_r$ & Learning Rate &Scales steps along\\
+            & & gradient decent of POF\\\hline
+            
+            
+            \hline\hline
+            batch\_size$_d$ & Batch Size &Specifies volume of data\\
+            &&available for statistics. \\\hline
+            $a_t$ & Anomaly Threshold &Selects points for Multifilter\\
+            &&based on $Z_{score}(\vec{m})$ \\\hline
+            $m_t$ & Multifilter Threshold &Selects points for prediction\\
+            &&based on multifilter count \\\hline
+        \end{tabular}
+    \end{table}
+    \vfill
+\end{frame}
