@@ -1,0 +1,57 @@
+\documentclass{book}
+\usepackage{amsmath}
+\begin{document}
+
+
+\begin{equation} \vec{\gamma}: =
+    \begin{bmatrix}
+        \gamma_{0}\\
+        \gamma_{1}\\
+        \gamma_{2}\\
+        {}\\
+        \vdots\\
+        {}\\
+        \gamma_{n}\\
+    \end{bmatrix}
+    \label{gamma}
+    \end{equation}
+
+
+\begin{equation} \mathbf{\Gamma}: =
+    \begin{bmatrix}
+        \gamma_{0}&{}&{}&{}&{}\\
+        {}&\gamma_{1}&{}&{}&{}&\\
+        {}&{}&\gamma_{2}&{}&{}&\\
+        {}&{}&{}&\ddots&{}&\\
+        {}&{}&{}&{}&\gamma_{n}\\
+    \end{bmatrix}
+    \label{vertex_weights}
+    \end{equation}
+
+\begin{equation} \mathbf{\tilde{S}}: =
+    \begin{bmatrix}
+    s_{0,0}&  s_{0,1}&  s_{0,2}& {}& \dots& {}& s_{0, n}\\
+    s_{1,0}&  s_{1,1}&  s_{1,2}& {}& \dots& {}& s_{1, n}\\
+    s_{2,0}&  s_{2,1}&  s_{2,2}& {}& \dots& {}& s_{2, n}\\
+    {}&{}&{}&{}&{}&{}\\
+    \vdots& \vdots&  \vdots& {}&\ddots & {}&{}\\
+    {}&{}&{}&{}&{}&{}\\
+    s_{n,0}&  s_{n,1}&  s_{n,2}& {}& \dots& {}& s_{n, n}\\
+    \end{bmatrix}
+    \label{similarity}
+\end{equation}
+
+
+\begin{equation} \mathbf{A}: = \mathbf{\Gamma \tilde{S} \Gamma} = 
+    \begin{bmatrix}
+    a_{0,0}&  a_{0,1}&  a_{0,2}& {}& \dots& {}& a_{0, n}\\
+    a_{1,0}&  a_{1,1}&  a_{1,2}& {}& \dots& {}& a_{1, n}\\
+    a_{2,0}&  a_{2,1}&  a_{2,2}& {}& \dots& {}& a_{2, n}\\
+    {}&{}&{}&{}&{}&{}\\
+    \vdots& \vdots&  \vdots& {}&\ddots & {}&{}\\
+    {}&{}&{}&{}&{}&{}\\
+    a_{n,0}&  a_{n,1}&  a_{n,2}& {}& \dots& {}& a_{n, n}\\
+    \end{bmatrix}
+    \label{affinity}
+\end{equation}
+\end{document}
